@@ -6,7 +6,7 @@ $user = NULL; //Add new user
 $id = NULL;
 
 if (!empty($_GET['id'])) {
-    $id = $_GET['id'];
+    $id = $userModel->decodeId($_GET['id'],123);
     $user = $userModel->findUserById($id);//Update existing user
 }
 
