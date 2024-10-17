@@ -1,152 +1,159 @@
 @black: #2e3233; 
 @requiredColor: #ff481e; 
+@backgroundColor: #fefefd;
+@borderColor: #edebe3;
+@focusBorderColor: #dad2cb;
+@buttonColor: #c45d3c;
+@textColor: #7c8182;
+@titleColor: #5a5f61;
+@labelColor: #303136; 
+@fontFamily: "Poppins", sans-serif;
+@fontSizeH1: 32px;
+@fontSizeBody: 16px;
+@fontSizeNote: 12px;
+@fontSizeButton: 13px;
+@fontSizeLabel: 16px;
+@fontSizeRequired: 12px;
+
 body { 
-    font-family: "Poppins", sans-serif;
+    font-family: @fontFamily;
     font-weight: 300;
     font-style: normal;
 }
+
 .type-3085 {
     margin: 80px auto;
+
     h1 { 
-        font-size: 32px;
+        font-size: @fontSizeH1;
         font-weight: 500;
         line-height: 46px;
         letter-spacing: -1px;
-        margin-top: 0px;
+        margin-top: 0;
         margin-bottom: 10px;
         color: @black; 
     }
+
     .title { 
         padding: 0 15px; 
+
         div { 
-            color: #5a5f61; 
-            font-size: 16px;
+            color: @titleColor; 
+            font-size: @fontSizeBody;
             font-weight: 300;
             line-height: 27px;
             font-style: normal;
         }
     }
-    .container  { 
+   
+    .form-container { 
         padding: 0 15px;
-        .container { 
-            margin: 0;
-            padding:0;
-        }
-        .col-md-8 { 
-            padding: 0px;
-            // margin-right: 15px;
-        }
-    }
-    .col-xs-6 { 
-         .note { 
-            font-size: 12px;
+
+        .note { 
+            font-size: @fontSizeNote;
             font-weight: 600;
             line-height: 26px;
         }
-        button { 
-            background-color: #c45d3c;
-            color: #fff;
-            padding: 15px 13px 15px 15px;
-            font-weight: 800;
-            letter-spacing: 1px;
-            font-size: 13px;
-            line-height: 14px;
-            border-radius: 4px;
-            text-transform: uppercase;
-            border: 0px;
+
+        .btn { 
+            display: flex;
+            justify-content: left;
+
+            button { 
+                background-color: @buttonColor;
+                color: #fff;
+                padding: 15px 13px;
+                font-weight: 800;
+                letter-spacing: 1px;
+                font-size: @fontSizeButton;
+                line-height: 14px;
+                border-radius: 4px;
+                text-transform: uppercase;
+                border: 0;
+            }
         }
     }
-    .col-md-6 { 
-        .form-group { 
-            margin: 10px 0 15px 0px;
-            .form-control { 
-                background-color: #fefefd;
+
+    .custom-col-6 { 
+        .custom-form-group { 
+            margin: 10px 0 15px 0;
+
+            .custom-form-control { 
+                background-color: @backgroundColor;
                 border-radius: 4px;
-                border: 2px solid #edebe3;
-                -webkit-box-shadow: inset 0 0px 0px rgba(0, 0, 0, .075);
+                border: 2px solid @borderColor;
                 box-shadow: inset 0 0px 0px rgba(0, 0, 0, .075);
                 height: 49px;
-                color: #7c8182;
+                color: @textColor;
             }
-            select.form-control { 
+
+            #location { 
                 height: 52px;
             }
-            .form-control:focus {
-                border-color: #dad2cb;
+
+            .custom-form-control:focus {
+                border-color: @focusBorderColor;
                 outline: 0;
-                -webkit-box-shadow: inset 0 0px 0px rgba(0, 0, 0, .075), 0 0 8px rgba(220, 213, 206, .6);
                 box-shadow: inset 0 0px 0px rgba(0, 0, 0, .075), 0 0 8px rgba(220, 213, 206, .6);
             }
         }
     }
-    .col-md-12 { 
-        .form-group {
-            padding: 0px; 
-            margin-top:10px;
+
+    .custom-col-12 { 
+        .custom-form-group {
+            padding: 0; 
+            margin-top: 10px;
             margin-bottom: 15px;
-            .col-md-12 { 
-                padding: 0px;
-            }
+
             span.required { 
                 color: @requiredColor;
             }
+
             label { 
-                padding: 0px;
-                font-size: 16px;         
+                padding: 0;
+                font-size: @fontSizeLabel;         
+
                 input { 
                     margin-left: 1em; 
-                    margin-top: 0px;
+                    margin-top: 0;
                 }
+
                 span { 
                     font-weight: 700;
-                    color: #5a5f61;
+                    color: @titleColor;
                 }
             }
+
             textarea {
-                background-color: #fefefd;
+                background-color: @backgroundColor;
                 border-radius: 4px;
-                border: 2px solid #edebe3;
-                color: #7c8182;
+                border: 2px solid @borderColor;
+                color: @textColor;
                 width: 100%;
             }
+
             textarea:focus {
-                border-color: #dad2cb;
+                border-color: @focusBorderColor;
                 outline: 0;
-                -webkit-box-shadow: inset 0 0px 0px rgba(0, 0, 0, .075), 0 0 8px rgba(220, 213, 206, .6);
                 box-shadow: inset 0 0px 0px rgba(0, 0, 0, .075), 0 0 8px rgba(220, 213, 206, .6);
             }
-         }
-         .col-md-12 { 
-            label { 
-                margin-bottom: 15px;
-                label { 
-                    color: @requiredColor;
-                }
-            }
-         }
+        }
+        label { 
+            margin-bottom: 15px;
+            color: @labelColor;
+        }
     }
     label { 
-        font-size: 16px;
+        font-size: @fontSizeLabel;
         line-height: 26px;
         font-weight: 500;
         margin-bottom: 5px;
+
         .required { 
-            font-size: 12px;
+            font-size: @fontSizeRequired;
         }
     }
     .required { 
         color: @requiredColor;
     }
-
 }
-
-
-
-
-
-
-
-
-
-
-
